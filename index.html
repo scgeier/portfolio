@@ -1,0 +1,159 @@
+<html>
+ <head>
+    <title>Color Scroll</title>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!--Bootstrap and my own CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/styles.css" />
+ </head>
+
+<body>
+ <!--<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">scott geier</a>
+    </div>
+   <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#page2">bio</a></li>
+        <li><a href="#page2">projects</a></li>
+     </ul>
+    </div>
+   </div>
+</nav>-->
+ 
+<div class="container-fluid">
+ <div class="row" id="clock-page">
+  <div class="col-xs-12 col-md-4" id="clock">
+   <canvas id="canvas" width="400" height="400"
+style="background-color:#ffff99">
+   </canvas>
+ </div>
+<div class="col-xs-12 col-md-8" id="text">
+ <div id="activity-section">
+  <h2>What I'm Probably Doing Right Now</h2>
+  <h5><em>"a real-time resume"</em></h6>
+   <h4 id="current-date"></h4><span id="chosen-time"></span>
+   <ul id="activity-list">
+    <li class="category">State of Consciousness: <span id="awake"></span></li>
+    <li class="category">Clothing: <span id="clothing"></span></li>
+    <li class="category">Food & Drink: <span id="food"></span></li>
+    <li class="category">Activity: <span id="activity"></span></li>
+    <li class="category">Duties: <span id="duties"></span></li>
+    <li class="category">Skills: <span id="skills"></span></li>
+   </ul>
+ </div>
+ 
+ <div class="dropdowns">
+   <p>Use the dropdowns below to see what I'm probably doing at other times. Or just keep staring at the screen.</p>
+  <select id="days-dropdown" name="form_select">
+   <option value="" disabled selected>Choose a day</option>
+   <option value="Monday">Monday</option>
+   <option value="Tuesday">Tuesday</option>
+   <option value ="Wednesday">Wednesday</option>
+   <option value ="Thursday">Thursday</option>
+   <option value ="Friday">Friday</option>
+   <option value ="Saturday">Saturday</option>
+   <option value ="Sunday">Sunday</option>
+  </select>
+   
+  <select id="hours-dropdown" name="form_select">
+   <option value="" disabled selected>Choose a time</option>
+   <option value="0">12:00 am</option>
+   <option value="1">1:00 am</option>
+   <option value="2">2:00 am</option>
+   <option value="3">3:00 am</option>
+   <option value="4">4:00 am</option>
+   <option value="5">5:00 am</option>
+   <option value="6">6:00 am</option>
+   <option value="7">7:00 am</option>
+   <option value="8">8:00 am</option>
+   <option value="9">9:00 am</option>
+   <option value="10">10:00 am</option>
+   <option value="11">11:00 am</option>
+   <option value="12">12:00 pm</option>
+   <option value="13">1:00 pm</option>
+   <option value="14">2:00 pm</option>
+   <option value="15">3:00 pm</option>
+   <option value="16">4:00 pm</option>
+   <option value="17">5:00 pm</option>
+   <option value="18">6:00 pm</option>
+   <option value="19">7:00 pm</option>
+   <option value="20">8:00 pm</option>
+   <option value="21">9:00 pm</option>
+   <option value="22">10:00 pm</option>
+   <option value="23">11:00 pm</option>
+  </select>          
+ </div>
+</div>
+ </div>
+
+
+<div id="page2">
+     <h2 id="headline">Lorem</h2>
+</div>
+ 
+<div id="page3">
+    <h2 id="headline2">Ipsum</h2>
+
+</div>
+</div>
+
+ <!--JQuery and Bootstratp JS-->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+<script src="/js/noframework.waypoints.min.js"></script>
+<script src="/js/jquery.timepicker.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<script>
+ 
+//Show what I'm doing now, using the current day and time//
+window.addEventListener("load", currentTime);
+ 
+ function currentTime() {
+  console.log("test");
+  
+  var today = new Date();
+  var dayOfWeek = today.getDay();
+  var monthNum = today.getMonth();
+  var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var dayOfMonth = today.getDate();
+  var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var day = dayNames[dayOfWeek];
+  var month = monthNames[monthNum];
+  var year = today.getFullYear();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('current-date').innerHTML = day + ", " + month + " " + dayOfMonth + ", " + year + " @ " + h + ":" + m + " EST";
+    var t = setInterval(currentTime, 60000);//If the user has chosen a different day and time from the dropdown, change the fields back to the current time after 1 minute//
+
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+  }
+
+  if (h >=12 && h <17){
+    console.log("test");
+    document.getElementById("awake").innerHTML = "Awake";
+    document.getElementById("clothing").innerHTML = "Pants, button-down shirt, cardigan and sneakers.";
+    document.getElementById("food").innerHTML = "Nothing. I'm not much of a snacker.";
+    document.getElementById("activity").innerHTML = "Freelance interactive journalist";
+    document.getElementById("duties").innerHTML = "Looking for questions that haven't been answered and answers that haven't been questioned, then reporting on them with interactive multimedia pieces.";
+    document.getElementById("skills").innerHTML = "HTML, HTML5, CSS, JS, JS frameworks and libraries (D3, JQuery, AngularJS), Node.js, Express, MongoDB, Adobe CC (particulary PS, Illustrator, Premiere Pro and Audition)";
+  }
+  
+};
+</script>
+</body>
+</html>

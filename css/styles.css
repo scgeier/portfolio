@@ -1,0 +1,67 @@
+body{
+    background:#eeeeee;
+}
+.navbar, .dropdown-menu{
+    background:none;
+    position:fixed;
+    width:100%;
+    border:none;
+}
+
+.navbar, .navbar-toggle{
+    border:none;
+    box-shadow:none;
+}
+
+.dropdown-menu li a:hover{
+    background:none;
+    color:white;
+}
+
+.navbar-brand{
+    font-size:2em;
+}
+
+#clock-page{
+background:#ffff99;
+height:1000px;
+margin-top:5%;
+}
+
+#page2{
+background:#ffb366;
+height:1000px;
+margin-top:5%;
+}
+
+#page3{
+background:#ff8566;
+height:1000px;
+margin-top:5%;
+}
+
+@media screen and (max-width:767px){
+    #canvas{
+        max-width:70%;
+        height:auto;
+    }
+}
+
+#date{
+    margin-left:8%;
+}
+
+#activity-list{
+    list-style: none;
+    list-style-position: inside;
+    margin:10px;
+    padding:0;
+}
+
+.category{
+    font-weight:900;
+}
+
+span{
+    font-weight:400;
+}
