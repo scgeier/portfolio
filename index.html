@@ -51,7 +51,9 @@
  <div id="activity-section">
   <h3 id="title">What I'm Probably Doing Right Now</h3>
   <h4 id="subtitle"><em>"a real-time resume for a man with two jobs and three kids"</em></h4>
-   <h5 id="current-date"></h5><h4 id="chosen-time"></h4>
+  <div id="date-time">
+   <h5 id="current-date"></h5><h5 id="chosen-time"></h5>
+  </div>
    <ul id="activity-list">
     <li class="category">State of Consciousness: <span id="awake"></span></li>
     <li class="category">Clothing: <span id="clothing"></span></li>
@@ -197,7 +199,7 @@ function checkTime(i) {
          document.getElementById("clothing").innerHTML = "Pants, button-down shirt, cardigan and loafers.";
          document.getElementById("food").innerHTML = "Ham, turkey or salami sandwich on gluten-free bread (I've had Celiac disease since 2005. Thank god gluten-free became trendy; Whole Foods used to rob me blind).";
          document.getElementById("activity").innerHTML = "Freelance interactive journalist";
-         document.getElementById("duties").innerHTML = "Reporting on science, arts and culture through interactive multimedia.";
+         document.getElementById("duties").innerHTML = "Reporting on arts, culture and science through interactive multimedia.";
          document.getElementById("skills").innerHTML = "HTML5, CSS3 & JS (clean and commented), JS frameworks and libraries (especially D3, JQuery, AngularJS), Node.js, NPM, Express, MongoDB, Adobe CC (particulary PS, Illustrator, Premiere Pro and Audition), Git, Google Analytics";
       }
       else if ((day != "Saturday" && day != "Sunday") && h > 12 && h < 17){
@@ -207,7 +209,7 @@ function checkTime(i) {
          document.getElementById("clothing").innerHTML = "Pants, button-down shirt, cardigan and loafers.";
          document.getElementById("food").innerHTML = "Nothing right now. I'm not much of a snacker.";
          document.getElementById("activity").innerHTML = "Freelance interactive journalist";
-         document.getElementById("duties").innerHTML = "Reporting on science, arts and culture through interactive multimedia.";
+         document.getElementById("duties").innerHTML = "Reporting on arts, culture and science through interactive multimedia.";
          document.getElementById("skills").innerHTML = "HTML5, CSS3 & JS (clean and commented), JS frameworks and libraries (especially D3, JQuery, AngularJS), Node.js, NPM, Express, MongoDB, Adobe CC (particulary PS, Illustrator, Premiere Pro and Audition), Git, Google Analytics";
       }
       else if ((day != "Saturday" && day != "Sunday") && h == 17){

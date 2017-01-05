@@ -118,7 +118,7 @@ background:#ffffb3;
 height:1000px;
 }
 
-/*Home page typography*/
+/*Home page typography and styling*/
 .container-fluid{
     border:3px double;
     margin:2%;
@@ -142,9 +142,13 @@ height:1000px;
     margin-bottom:2%;
 }
 
-#current-date, #activity-list{
+#current-date, #activity-list, #chosen-time{
     font-family:'Raleway', sans-serif;
     font-weight:bold;
+}
+
+#current-date, #chosen-time{
+    display:inline;
 }
 
 #activity-section{

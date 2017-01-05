@@ -135,10 +135,10 @@ var chosenTime;
 document.getElementById("days-dropdown").addEventListener('change', function () {
   window.removeEventListener("load", currentTime);
     var chosenDay = this.value;
-    document.getElementById("current-date").innerHTML = chosenDay;
+    document.getElementById("current-date").innerHTML = chosenDay + "s";
       document.getElementById("hours-dropdown").addEventListener('change', function () {
        var chosenTime = this.value;
-      document.getElementById("chosen-time").innerHTML = "@ " + chosenTime;
+      document.getElementById("chosen-time").innerHTML = " at " + chosenTime;
       console.log(chosenDay);
       console.log(chosenTime);
       
@@ -185,7 +185,7 @@ document.getElementById("days-dropdown").addEventListener('change', function () 
          document.getElementById("clothing").innerHTML = "Pants, button-down shirt, cardigan and loafers.";
          document.getElementById("food").innerHTML = "Ham, turkey or salami sandwich on gluten-free bread (I've had Celiac disease since 2005. Thank god gluten-free became trendy; Whole Foods used to rob me blind).";
          document.getElementById("activity").innerHTML = "Freelance interactive journalist";
-         document.getElementById("duties").innerHTML = "Reporting on science, arts and culture through interactive multimedia.";
+         document.getElementById("duties").innerHTML = "Reporting on arts, culture and science through interactive multimedia.";
          document.getElementById("skills").innerHTML = "HTML5, CSS3 & JS (clean and commented), JS frameworks and libraries (especially D3, JQuery, AngularJS), Node.js, NPM, Express, MongoDB, Adobe CC (particulary PS, Illustrator, Premiere Pro and Audition), Git, Google Analytics";
       }
       else if ((chosenDay != "Saturday" && chosenDay != "Sunday") && chosenTime > 12 && chosenTime < 17){
@@ -195,7 +195,7 @@ document.getElementById("days-dropdown").addEventListener('change', function () 
          document.getElementById("clothing").innerHTML = "Pants, button-down shirt, cardigan and loafers.";
          document.getElementById("food").innerHTML = "Nothing right now. I'm not much of a snacker.";
          document.getElementById("activity").innerHTML = "Freelance interactive journalist";
-         document.getElementById("duties").innerHTML = "Reporting on science, arts and culture through interactive multimedia.";
+         document.getElementById("duties").innerHTML = "Reporting on arts, culture and science through interactive multimedia.";
          document.getElementById("skills").innerHTML = "HTML5, CSS3 & JS (clean and commented), JS frameworks and libraries (especially D3, JQuery, AngularJS), Node.js, NPM, Express, MongoDB, Adobe CC (particulary PS, Illustrator, Premiere Pro and Audition), Git, Google Analytics";
       }
       else if ((chosenDay != "Saturday" && chosenDay != "Sunday") && chosenTime == 17){
