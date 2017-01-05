@@ -5,7 +5,10 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <!--Bootstrap and my own CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+      <link href="https://fonts.googleapis.com/css?family=Gravitas+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer:400i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cinzel:700|Raleway:400,800" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
  </head>
 
@@ -46,9 +49,9 @@
  </div>
 <div class="col-xs-12 col-md-8" id="text">
  <div id="activity-section">
-  <h2>What I'm Probably Doing Right Now</h2>
-  <h5><em>"a real-time resume for a man with three jobs"</em></h6>
-   <h4 id="current-date"></h4><h4 id="chosen-time"></h4>
+  <h3 id="title">What I'm Probably Doing Right Now</h3>
+  <h4 id="subtitle"><em>"a real-time resume for a man with two jobs and three kids"</em></h4>
+   <h5 id="current-date"></h5><h4 id="chosen-time"></h4>
    <ul id="activity-list">
     <li class="category">State of Consciousness: <span id="awake"></span></li>
     <li class="category">Clothing: <span id="clothing"></span></li>
@@ -60,7 +63,7 @@
  </div>
  
  <div class="dropdowns">
-   <p><em>Use the dropdowns below to see what I'm probably doing at other times. Or just keep staring at the screen.</em></p>
+   <p id="dropdown-instructions"><em>Use the dropdowns below to see what I'm probably doing at other times. Or just keep staring at the screen.</em></p>
   <select id="days-dropdown" name="form_select">
    <option value="" disabled selected>Choose a day</option>
    <option value="Monday">Monday</option>
