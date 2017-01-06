@@ -1,25 +1,35 @@
 body{
     background:#ffffb3;
+    border:3px double;
+    margin:2%;
+    padding-top: 5%;
 }
-.navbar, .dropdown-menu{
+
+#yellow-nav{
     background:none;
-    position:fixed;
-    width:100%;
     border:none;
+    font-family:'Playfair Display SC';
+    font-size:1em;
+    font-weight:bold;
+    padding:3% 3% 0% 3%;
 }
 
-.navbar, .navbar-toggle{
-    border:none;
-    box-shadow:none;
+#yellow-nav a{
+    color:black;
 }
 
-.dropdown-menu li a:hover{
-    background:none;
-    color:white;
+#yellow-nav a:hover{
+    color:#ffcc00;
 }
 
-.navbar-brand{
-    font-size:2em;
+#clock-page, #page2, #page3{
+ border-bottom:3px double;
+ height:1000px;
+ padding-top:5%;
+}
+
+#clock-page{
+    border-top:none;
 }
 
 .clock {
@@ -113,17 +123,9 @@ body{
     }
 }
 
-#clock-page{
-background:#ffffb3;
-height:1000px;
-}
 
 /*Home page typography and styling*/
-.container-fluid{
-    border:3px double;
-    margin:2%;
-    padding-top:2%;
-}
+
 
 @font-face {
   font-family: Shadeco;
