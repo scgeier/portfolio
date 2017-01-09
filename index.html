@@ -121,30 +121,43 @@
 <div id="page2">
   <div class="row">
    <div class="col-xs-12">
-    <p class="title" id="projects-headline">Recent Projects</br>
+    <p class="title" id="projects-page-title">Recent Projects</br>
     <span class="subtitle" id="projects-subtitle">interactive stories, in reverse chronological order</span></p>
    </div>
   </div>
 
  <div class="row">
-  <div class="col-xs-12 col-md-6 project-box">
+  <div class="col-xs-12 col-md-6 project-box" id="mmp-box">
+   <div class="project-graphic">
    <img src="/img/mmp-tv-with-kiss.svg" class="project-poster" id="mmp"/>
-   <div class="project-description" id="mmp-description" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+   <div class="project-description" id="mmp-description" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </div>
+   </div>
    <a href="http://www.millenniummemory.com" class="project-links"><h4 class="project-name">Millennium Memory Project</h4></a>
   </div>
-  <div class="col-xs-12 col-md-6 project-box">
-   <img src="/img/CIA-poster-yellow.svg" class="project-poster" id="CIA"/>
-   <div class="project-description"></div>
+  
+  <div class="col-xs-12 col-md-6 project-box" id="CIA-box">
+   <div class="project-graphic">
+    <img src="/img/CIA-poster-yellow.svg" class="project-poster" id="CIA" />
+    <div class="project-description" id="CIA-description" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </div>
+   </div>
    <h4 class="project-name">CIA World Book Data Viz</h4>
   </div>
- </div>
+  </div>
+
  
   <div class="row">
    <div class="col-xs-12 col-md-6 project-box">
-    <img src="/img/writers-poster.svg" class="project-poster" id="writers"/>
-    <div class="project-description"></div>
+    <div class="project-graphic">
+     <img src="/img/writers-poster.svg" class="project-poster" id="writers"/>
+     <div class="project-description" id="writers-description" style="display:none;">
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+     </div>
+    </div>
     <h4 class="project-name">Best-selling Writers of All Time</h4>
    </div>
+   
   <div class="col-xs-12 col-md-6 project-box">
     <img src="/img/senate-empty-seats.svg" class="project-poster" id="senate"/>
     <div class="project-description"></div>
@@ -351,6 +364,8 @@ function checkTime(i) {
       }
   
 };
+
+
 </script>
 </body>
 </html>

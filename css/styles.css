@@ -210,7 +210,7 @@ span{
     margin:10px;
 }
 
-#projects-headline{
+#projects-page-title{
     float:right;
     font-size:1.8em;
     padding:3% 5% 0% 0%;
@@ -220,6 +220,9 @@ span{
     font-size:.7em;
 }
 
+.project-graphic{
+    height:70%;
+}
 
 .project-box a{
     color:black;

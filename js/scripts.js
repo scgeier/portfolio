@@ -286,10 +286,25 @@ document.getElementById("days-dropdown").addEventListener('change', function () 
 
 chosenSched();
 
-$("#mmp").mouseenter(function(){
-   $(this).fadeToggle(500);
+$("#mmp").mouseover(function(){
+  $(this).fadeToggle(100);
   $("#mmp-description").fadeToggle(500);
-})
+});
+
+$("#mmp-box").mouseleave(function(){
+  $("#mmp-description").fadeToggle(100);
+  $("#mmp").fadeToggle(400);
+});
+
+$("#CIA").mouseover(function(){
+  $(this).fadeToggle(100);
+  $("#CIA-description").fadeToggle(500);
+});
+
+$("#writers").mouseover(function(){
+  $(this).fadeToggle(100);
+  $("#writers-description").fadeToggle(500);
+});
 
 });
 
