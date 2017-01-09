@@ -220,6 +220,7 @@ span{
     font-size:.7em;
 }
 
+
 .project-box a{
     color:black;
 }
@@ -233,6 +234,7 @@ span{
     text-align: center;
 }
 
+
 #CIA, #map, #fingers{
     width:80%;
 }
@@ -244,4 +246,5 @@ span{
 #fingers{
     margin-left:25%;
 }
+
 

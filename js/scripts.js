@@ -286,6 +286,10 @@ document.getElementById("days-dropdown").addEventListener('change', function () 
 
 chosenSched();
 
+$("#mmp").mouseenter(function(){
+   $(this).fadeToggle(500);
+  $("#mmp-description").fadeToggle(500);
+})
 
 });
 
