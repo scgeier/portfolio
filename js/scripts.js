@@ -15,7 +15,7 @@ $( document ).ready(function() {
   });
 
 
-var waypoint = new Waypoint({
+/*var waypoint = new Waypoint({
   element: document.getElementById('page2'),
   handler: function() {
     var text = document.getElementById("headline").innerHTML;
@@ -85,7 +85,7 @@ var r = e2.replace(/m/gi, "r");
          
     this.destroy();
   }
-});
+});*/
 
 function initLocalClocks() {
   // Get the local time using JS
@@ -136,10 +136,12 @@ document.getElementById("days-dropdown").addEventListener('change', function () 
   window.removeEventListener("load", currentTime);
     var chosenDay = this.value;
     document.getElementById("current-date").innerHTML = chosenDay + "s";
-      document.getElementById("hours-dropdown").addEventListener('change', function () {
+    document.getElementById("hours-dropdown").addEventListener('change', function () {
        var chosenTime = this.value;
-      document.getElementById("chosen-time").innerHTML = " at " + chosenTime;
-      console.log(chosenDay);
+       var displayedTime = $("#hours-dropdown option:selected").text();
+       console.log(displayedTime);
+
+      document.getElementById("chosen-time").innerHTML = " at " + displayedTime;
       console.log(chosenTime);
       
 //Sleeping//

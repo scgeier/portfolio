@@ -41,12 +41,20 @@ body{
 
 #clock-page, #page2, #page3{
  border-bottom:3px double;
- height:1000px;
  padding-top:5%;
 }
 
 #clock-page{
     border-top:none;
+    height:1000px;
+}
+
+#page2{
+    height:auto;
+}
+
+#page3{
+    height:800px;
 }
 
 .clock {
@@ -178,6 +186,10 @@ select{
     background:#ffffb3;
 }
 
+select:focus{
+    color:#ff751a;
+}
+
 
 #date{
     margin-left:8%;
@@ -208,14 +220,28 @@ span{
     font-size:.7em;
 }
 
-/*.project-box{
-    border:1px dotted black;
-}*/
+.project-box a{
+    color:black;
+}
+
+.project-box a:hover{
+    text-decoration: none;
+    color:#ff751a;
+}
 
 .project-name{
     text-align: center;
 }
 
-#map{
-    width:90%;
+#CIA, #map, #fingers{
+    width:80%;
 }
+
+#CIA{
+    margin:5% 0% 7% 12%;
+}
+
+#fingers{
+    margin-left:25%;
+}
+

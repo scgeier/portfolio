@@ -1,6 +1,6 @@
 <html>
  <head>
-    <title>Color Scroll</title>
+    <title>Portfolio</title>
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <!--Bootstrap and my own CSS-->
@@ -122,39 +122,50 @@
   <div class="row">
    <div class="col-xs-12">
     <p class="title" id="projects-headline">Recent Projects</br>
-    <span class="subtitle" id="projects-subtitle">my interactive stories, in reverse chronological order</span></p>
+    <span class="subtitle" id="projects-subtitle">interactive stories, in reverse chronological order</span></p>
    </div>
   </div>
 
  <div class="row">
   <div class="col-xs-12 col-md-6 project-box">
-   <img src="/img/mmp-tv-with-scatter.svg"/>
-   <h4 class="project-name">Millennium Memory Project</h4>
+   <img src="/img/mmp-tv-with-kiss.svg"/>
+   <div class="project-description"></div>
+   <a href="http://www.millenniummemory.com" class="project-links"><h4 class="project-name">Millennium Memory Project</h4></a>
   </div>
   <div class="col-xs-12 col-md-6 project-box">
-   <img src="/img/CIA-poster-yellow.svg"/>
-   <h4 class="project-name">CIA Data Vis</h4>
+   <img src="/img/CIA-poster-yellow.svg" id="CIA"/>
+   <div class="project-description"></div>
+   <h4 class="project-name">CIA World Book Data Viz</h4>
+  </div>
+ </div>
+ 
+  <div class="row">
+   <div class="col-xs-12 col-md-6 project-box">
+    <img src="/img/writers-poster.svg" id="writers"/>
+    <div class="project-description"></div>
+    <h4 class="project-name">Best-selling Writers of All Time</h4>
+   </div>
+  <div class="col-xs-12 col-md-6 project-box">
+    <img src="/img/senate-empty-seats.svg" id="senate"/>
+    <div class="project-description"></div>
+    <h4 class="project-name">2016 U.S. Senate Elections</h4>
   </div>
  </div>
   
   <div class="row">
    <div class="col-xs-12 col-md-6 project-box">
     <img src="/img/map-outline.svg" id="map"/>
+    <div class="project-description"></div>
    <h4 class="project-name">How The Money Moves</h4>
   </div>
   <div class="col-xs-12 col-md-6 project-box">
-   Project 4
+    <img src="/img/fingers-transparent.svg" id="fingers"/>
+    <div class="project-description"></div>
+   <h4 class="project-name">Fingers: Fact & Fiction</h4>
   </div>
  </div>
   
- <div class="row">
-   <div class="col-xs-12 col-md-6 project-box">
-   Project 5
-   </div>
-  <div class="col-xs-12 col-md-6 project-box">
-   Project 6
-  </div>
- </div>
+
  
  </div>
   </div>
@@ -257,7 +268,7 @@ function checkTime(i) {
          document.getElementById("food").innerHTML = "My third cup of coffee and/or my first cup of matcha green tea";
          document.getElementById("activity").innerHTML = "Freelance interactive journalist";
          document.getElementById("duties").innerHTML = "Reporting on arts, culture and science through interactive multimedia.";
-         document.getElementById("skills").innerHTML = "HTML5, CSS3, JavaScript, D3, JQuery, AngularJS, Node.js, NPM, Express, MongoDB, Adobe CC (particulary Illustrator, Photoshop, Premiere Pro and Audition), Git, Google Analytics. Twelve years of experience as a professional writer, six years of experience interviewing data and people.";
+         document.getElementById("skills").innerHTML = "HTML5, CSS3, JavaScript, JQuery, D3, AngularJS, Node.js, NPM, Express, MongoDB, Adobe CC (particulary Illustrator, Photoshop, Premiere Pro and Audition), Git, Google Analytics. Twelve years of experience as a professional writer, six years of experience interviewing data and people.";
       }
       else if ((day != "Saturday" && day != "Sunday") && h == 17){
         
