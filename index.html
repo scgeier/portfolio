@@ -12,18 +12,18 @@
     <link rel="stylesheet" href="css/styles.css" />
  </head>
 
-<body>
+<body id="top">
 <nav class="navbar navbar-default navbar-fixed-top" id="yellow-nav">
   <div class="container-fluid" id="bs-bar">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" id="portfolio-hamburger" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#clock-page">
+      <a class="navbar-brand" id="fading-brand" href="#clock-page">
       <img src="/img/self-portrait.svg" id="navbar-self-portrait"/>
        <p id="navbar-brand">scott geier<br><span id="job-title">interactive multimedia investigative journalist</span></p>
       </a>
@@ -122,15 +122,15 @@
   <div class="row">
    <div class="col-xs-12">
     <p class="title" id="projects-page-title">Recent Projects</br>
-    <span class="subtitle" id="projects-subtitle">interactive stories, in reverse chronological order</span></p>
+    <span class="subtitle" id="projects-subtitle">Interactive stories, in reverse chronological order. </span><span id="mobile-instructions" style="display:none;">Tap the drawings for more info.</span></p>
    </div>
   </div>
 
  <div class="row">
   <div class="col-xs-12 col-md-6 project-box" id="mmp-box">
    <div class="project-graphic">
-   <img src="/img/mmp-tv-with-kiss.svg" class="project-poster" id="mmp"/>
-   <div class="project-description" id="mmp-description" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+   <img src="/img/mmp-tv-with-kiss.svg" class="project-poster" id="mmp-pic"/>
+   <div class="project-description" id="mmp-description" style="display:none;">In the summer of 2016, I reached out to more than 200 people in a nationwide online survey that began with a simple question: "Do you remember where you were on New Year's Eve, 1999?" I also grabbed a microphone and hit the streets, talking to people from all walks of life about their thoughts and memories from the turn of the millennium. The result was this <a href="http://www.millenniummemory.com" id="mmp-link">website</a>, a hybrid work of data visualization, oral history and a longform journalism. It was my master's thesis at the University of North Carolina at Chapel Hill.
     </div>
    </div>
    <a href="http://www.millenniummemory.com" class="project-links"><h4 class="project-name">Millennium Memory Project</h4></a>
@@ -138,43 +138,52 @@
   
   <div class="col-xs-12 col-md-6 project-box" id="CIA-box">
    <div class="project-graphic">
-    <img src="/img/CIA-poster-yellow.svg" class="project-poster" id="CIA" />
-    <div class="project-description" id="CIA-description" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    <img src="/img/CIA-poster-yellow.svg" class="project-poster" id="CIA-pic" />
+    <div class="project-description" id="CIA-description" style="display:none;">The CIA created the World Factbook as a classified document in 1962. They released it to the public in 1971, and it's now one of the leading sources of statistics on each of the world's 195 sovereign nations and 59 dependent territories. This <a href="http://www.scottcgeier.com" id="CIA-link"> website</a> is a visualization of that data.
     </div>
    </div>
-   <h4 class="project-name">CIA World Book Data Viz</h4>
+   <a href="http://www.scottcgeier.com" class="project-links"><h4 class="project-name">CIA World Book Data Viz</h4></a>
   </div>
   </div>
 
  
   <div class="row">
-   <div class="col-xs-12 col-md-6 project-box">
+   <div class="col-xs-12 col-md-6 project-box" id="writers-box">
     <div class="project-graphic">
-     <img src="/img/writers-poster.svg" class="project-poster" id="writers"/>
-     <div class="project-description" id="writers-description" style="display:none;">
-     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+     <img src="/img/writers-poster.svg" class="project-poster" id="writers-pic"/>
+     <div class="project-description" id="writers-description" style="display:none;">In the spring of 2016, I came across a list of the best-selling fiction writers of all time. The names were surprising; the sales figures were astounding. I decided to bring the list to life with an interactive infographic.
      </div>
     </div>
     <h4 class="project-name">Best-selling Writers of All Time</h4>
    </div>
    
-  <div class="col-xs-12 col-md-6 project-box">
-    <img src="/img/senate-empty-seats.svg" class="project-poster" id="senate"/>
-    <div class="project-description"></div>
-    <h4 class="project-name">2016 U.S. Senate Elections</h4>
+  <div class="col-xs-12 col-md-6 project-box" id="senate-box">
+   <div class="project-graphic">
+    <img src="/img/senate-empty-seats.svg" class="project-poster" id="senate-pic"/>
+     <div class="project-description" id="senate-description" style="display:none;">I built this app in February 2016 as an AngularJS project for the Advanced Interactive Multimedia class at the University of North Carolina. With the Senate elections coming up, I wondered: How many of the candidates went to Harvard? How many of them were lawyers? This <a href="http://www.scottcgeier.com/static/senate" id="senate-link">interactive app</a> provided answers to those questions and more.
+      </div>
+   </div>
+    <a href="http://www.scottcgeier.com/static/senate" class="project-links"><h4 class="project-name">2016 U.S. Senate Elections</h4></a>
   </div>
  </div>
   
   <div class="row">
-   <div class="col-xs-12 col-md-6 project-box">
-    <img src="/img/map-outline.svg" class="project-poster" id="map"/>
-    <div class="project-description"></div>
-   <h4 class="project-name">How The Money Moves</h4>
+   <div class="col-xs-12 col-md-6 project-box" id="map-box">
+    <div class="project-graphic">
+     <img src="/img/map-outline.svg" class="project-poster" id="map-pic"/>
+     <div class="project-description" id="map-description" style="display:none;">I built this <a href="http://www.scottcgeier.com/586_project3" id="map-link">website</a> as a project at UNC. I had two goals: 1) Produce a work of data journalism with at least three visualizations; and 2) emulate the style of a major news publication.<br><br>To accomplish the first goal, I combed through U.S. census data and found some interesting trends in the migration patterns of Americans at different income levels. For the second objective, I chose to emulate the style of FiveThirtyEight (as it looked in fall 2015). The resemblance is purely for educational purposes. And it's damn near spot-on, if you ask me.
+     </div>
+    </div>
+    <a href="http://www.scottcgeier.com/586_project3" class="project-links"><h4 class="project-name">How The Money Moves</h4></a>
   </div>
-  <div class="col-xs-12 col-md-6 project-box">
-    <img src="/img/fingers-transparent.svg" class="project-poster" id="fingers"/>
-    <div class="project-description"></div>
-   <h4 class="project-name">Fingers: Fact & Fiction</h4>
+   
+  <div class="col-xs-12 col-md-6 project-box" id="fingers-box">
+   <div class="project-graphic">
+    <img src="/img/fingers-transparent.svg" class="project-poster" id="fingers-pic"/>
+    <div class="project-description" id="fingers-description" style="display:none;">Ever wonder where the word 'pinky' comes from? Why do most people wear wedding rings on the third finger of their left hand? The answers to these questions and more can be found in this  <a href="http://www.scottcgeier.com/586_project2" id="fingers-link">interactive slider</a>. I built the app as a project for the Intermediate Interactive Multimedia class at the University of North Carolina at Chapel Hill.
+    </div>
+   </div>
+   <a href="http://www.scottcgeier.com/586_project2" class="project-links"><h4 class="project-name">Fingers: Fact & Fiction</h4></a>
   </div>
  </div>
   
@@ -185,7 +194,7 @@
 
  
 <div id="page3">
-    <h2 id="headline2">Ipsum</h2>
+    <h2 id="headline2">Bio</h2>
 
 </div>
 </div>
@@ -362,9 +371,15 @@ function checkTime(i) {
          document.getElementById("duties").innerHTML = "None. Blessedly, none.";
         document.getElementById("skills").innerHTML = "Finding a movie that my wife and I both want to watch. This is surprisingly difficult, once you've watched all of the good documentaries in Netflix and you don't want the popcorn movies in the RedBox down the street.";
       }
-  
 };
 
+function showMobileInfo() {
+   if (window.innerWidth < 768) {
+    document.getElementById("mobile-instructions").style.display = "inline-block";
+   }
+};
+
+showMobileInfo();
 
 </script>
 </body>

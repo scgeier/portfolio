@@ -15,77 +15,27 @@ $( document ).ready(function() {
   });
 
 
-/*var waypoint = new Waypoint({
-  element: document.getElementById('page2'),
+var waypoint = new Waypoint({
+  element: document.getElementById('clock-area'),
   handler: function() {
-    var text = document.getElementById("headline").innerHTML;
-var s = text.replace(/l/gi, "S");
-var c = s.replace(/o/gi, "c");
-var o = c.replace(/r/gi, "o");
-var t = o.replace(/e/gi, "t");
-var t2 = t.replace(/m/gi, "t");
-
-  
-  setTimeout(function(){
-    document.getElementById("headline").innerHTML = s;
-}, 1000);
-  
-    setTimeout(function(){
-    document.getElementById("headline").innerHTML = c;
-}, 1100);
-  
-     setTimeout(function(){
-    document.getElementById("headline").innerHTML = o;
-}, 1200);
-  
-       setTimeout(function(){
-    document.getElementById("headline").innerHTML = t;
-}, 1300);
-  
-         setTimeout(function(){
-    document.getElementById("headline").innerHTML = t2;
-}, 1400);
-
- this.destroy();
- 
+           if (window.innerWidth < 767) {
+              $("#fading-brand").fadeToggle(300);
+           }
   }
-});
-
+})
 
 var waypoint2 = new Waypoint({
   element: document.getElementById('page3'),
   handler: function() {
-    var text = document.getElementById("headline2").innerHTML;
-var G = text.replace(/i/gi, "G");
-var e = G.replace(/p/gi, "e");
-var i = e.replace(/s/gi, "i");
-var e2 = i.replace(/u/gi, "e");
-var r = e2.replace(/m/gi, "r");
-
-  
-  setTimeout(function(){
-    document.getElementById("headline2").innerHTML = G;
-}, 1000);
-  
-    setTimeout(function(){
-    document.getElementById("headline2").innerHTML = e;
-}, 1100);
-  
-     setTimeout(function(){
-    document.getElementById("headline2").innerHTML = i;
-}, 1200);
-  
-       setTimeout(function(){
-    document.getElementById("headline2").innerHTML = e2;
-}, 1300);
-  
-         setTimeout(function(){
-    document.getElementById("headline2").innerHTML = r;
-}, 1400);
-         
-    this.destroy();
+           if (window.innerWidth < 767) {
+              $("#fading-brand").fadeToggle(300);
+           }
   }
-});*/
+})
+
+
+
+
 
 function initLocalClocks() {
   // Get the local time using JS
@@ -286,24 +236,64 @@ document.getElementById("days-dropdown").addEventListener('change', function () 
 
 chosenSched();
 
-$("#mmp").mouseover(function(){
-  $(this).fadeToggle(100);
-  $("#mmp-description").fadeToggle(500);
+$("#mmp-pic").mouseover(function(){
+  $(this).fadeToggle(200);
+  $("#mmp-description").fadeToggle(400);
 });
 
 $("#mmp-box").mouseleave(function(){
-  $("#mmp-description").fadeToggle(100);
-  $("#mmp").fadeToggle(400);
+  $("#mmp-description").fadeToggle(200);
+  $("#mmp-pic").fadeToggle(400);
 });
 
-$("#CIA").mouseover(function(){
-  $(this).fadeToggle(100);
-  $("#CIA-description").fadeToggle(500);
+$("#CIA-pic").mouseover(function(){
+  $(this).fadeToggle(200);
+  $("#CIA-description").fadeToggle(400);
 });
 
-$("#writers").mouseover(function(){
-  $(this).fadeToggle(100);
-  $("#writers-description").fadeToggle(500);
+$("#CIA-box").mouseleave(function(){
+  $("#CIA-description").fadeToggle(200);
+  $("#CIA-pic").fadeToggle(400);
+});
+
+$("#writers-pic").mouseenter(function(){
+  $(this).fadeToggle(200);
+  $("#writers-description").fadeToggle(400);
+});
+
+$("#writers-box").mouseleave(function(){
+  $("#writers-description").fadeToggle(200);
+  $("#writers-pic").fadeToggle(400);
+});
+
+$("#senate-pic").mouseover(function(){
+  $(this).fadeToggle(200);
+  $("#senate-description").fadeToggle(400);
+});
+
+$("#senate-box").mouseleave(function(){
+  $("#senate-description").fadeToggle(200);
+  $("#senate-pic").fadeToggle(400);
+});
+
+$("#map-pic").mouseover(function(){
+  $(this).fadeToggle(200);
+  $("#map-description").fadeToggle(400);
+});
+
+$("#map-box").mouseleave(function(){
+  $("#map-description").fadeToggle(200);
+  $("#map-pic").fadeToggle(400);
+});
+
+$("#fingers-pic").mouseover(function(){
+  $(this).fadeToggle(200);
+  $("#fingers-description").fadeToggle(400);
+});
+
+$("#fingers-box").mouseleave(function(){
+  $("#fingers-description").fadeToggle(200);
+  $("#fingers-pic").fadeToggle(400);
 });
 
 });
