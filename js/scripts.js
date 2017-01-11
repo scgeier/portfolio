@@ -27,8 +27,8 @@ var waypoint = new Waypoint({
 var waypoint2 = new Waypoint({
   element: document.getElementById('page3'),
   handler: function() {
-           if (window.innerWidth < 767) {
-              $("#fading-brand").fadeToggle(300);
+           if (window.innerWidth > 767) {
+              $("#fading-brand").fadeToggle(400);
            }
   }
 })

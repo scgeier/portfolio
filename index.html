@@ -19,10 +19,9 @@
     <div class="navbar-header">
       <a class="navbar-brand" id="fading-brand" href="#clock-page">
       <img src="/img/self-portrait.svg" id="navbar-self-portrait"/>
-       <p id="navbar-brand">scott geier<br><span id="job-title">interactive multimedia investigative journalist</span></p>
+       <p id="navbar-brand"><span id="name">scott geier</span><br><span id="job-title">interactive multimedia<span id="mobile-break"><br></span> investigative journalism</span></p>
       </a>
     </div>
-
       <ul id="desktop-menu-right">
         <li><a href="#page3">Bio</a></li>
         <li><a href="#page2">Projects</a></li>
@@ -30,11 +29,12 @@
      
      <div id="mobile-menu" style="display:none;" onclick="showMenu();">
       <ul>
-       <li class="dot" id="projects"><span id="hidden-projects" style="opacity:0;">Projects</span></li>
-       <li class="dot" id="bio"><span id="hidden-bio" style="display:none;">Bio</span></li>
-       <li class="dot" id="bio"></li>
+       <li class="dot" id="projects"><span id="hidden-projects" style="display:none;"><a href="#page2">Projects</a></span></li>
+       <li class="dot" id="bio"><span id="hidden-bio" style="display:none;"><a href="#page3">Bio</a></span></a></li>
+       <li class="dot" id="empty"></li>
       </ul>
      </div>
+
   </div><!-- /.container-fluid -->
 </nav>
  
@@ -191,7 +191,7 @@
 
  
 <div id="page3">
-    <h2 id="headline2">Bio</h2>
+<img id="selfie" src="/img/portfolio-pic-yellow.png"/>
 
 </div>
 </div>
@@ -209,17 +209,20 @@
     if (window.innerWidth < 768) {
         document.getElementById("desktop-menu-right").style.display = "none";
         document.getElementById("mobile-menu").style.display = "block";
+    }else{
+     document.getElementById("mobile-break").style.display = "none";
     }
  }
  hideMenu();
  
  function showMenu(){
-      document.getElementById("projects").style.width = "50px";
-      document.getElementById("projects").style.height = "15px";
-      document.getElementById("projects").style.borderRadius = "0%";
-      document.getElementById("projects").style.transition = ".3s linear";
-      document.getElementById("hidden-projects").style.opacity = 1;
+      document.getElementById("hidden-projects").style.display = "block";
       document.getElementById("hidden-projects").style.transition = ".7s linear";
+      document.getElementById("hidden-bio").style.display = "block";
+      document.getElementById("hidden-bio").style.transition = ".7s linear";
+      document.getElementById("empty").style.display = "none";
+      document.getElementById("projects").style.cssText = "width:50px;height:15px;border-radius:0;transition:.3s linear;"
+      document.getElementById("bio").style.cssText = "width:50px; height:15px;border-radius:0;transition:.3s linear";
     }
  
 //Show what I'm doing now, using the current day and time//
