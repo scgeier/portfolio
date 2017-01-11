@@ -33,11 +33,34 @@ body{
     width:300px;
 }
 
-#portfolio-hamburger{
-    border:none;
-    padding-right:5%;
+#desktop-menu-right li{
+    display:inline;
+    float:right;
+    list-style: none;
+    padding:2%;
 }
 
+#desktop-menu-right li a {
+    text-decoration: none;
+}
+
+
+
+#mobile-menu ul {
+  list-style: none;
+  float:right;
+  margin-right:5%;
+}
+
+.dot{
+  width:7px;
+  height:7px;
+  border:1px solid;
+  border-radius:50%;
+  margin:2px;
+  font-size:0.5em;
+  text-align:center;
+}
 
 #job-title{
     font-family:'Raleway';
