@@ -336,7 +336,22 @@ span{
     width:90%;
 }
 
+#page3{
+    margin-top:10%;
+}
+
 #selfie{
-    margin-left:2%;
+    float:left;
+    margin-right:2%;
+}
+
+@media screen and (max-width:767px){
+    #selfie{
+        width:40%;
+    }
+}
+
+#bio-article{
+    font-family:'Raleway', sans-serif;
 }
 
