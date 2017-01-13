@@ -343,6 +343,7 @@ span{
 #selfie{
     float:left;
     margin-right:2%;
+    width:180px;
 }
 
 @media screen and (max-width:767px){
@@ -355,3 +356,14 @@ span{
     font-family:'Raleway', sans-serif;
 }
 
+.seal{
+    height:20%;
+}
+
+#infographic{
+    width:100%;
+}
+
+#education-section, #infographic-section, #bio-charts-section{
+    border:1px solid;
+}
