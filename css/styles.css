@@ -250,11 +250,14 @@ select:focus{
     margin-left:8%;
 }
 
-#activity-list{
+#activity-list, .skills-list{
     list-style: none;
     list-style-position: inside;
-    margin:10px;
     padding:0;
+}
+
+#activity-list{
+    margin:10px;
 }
 
 span{
@@ -378,4 +381,70 @@ span{
 
 #education-section, #infographic-section, #bio-charts-section{
     border:1px solid;
+}
+
+
+#nutrition{
+    border:1px solid;
+    font-family:Helvetica;
+    padding:5px;
+}
+
+#nutrition-header{
+    border-bottom:5px solid;
+}
+
+#nutrition-header h3{
+    font-weight: bolder;
+    margin:0;
+    text-align: center;
+}
+
+.nutrition-text, .skills-list{
+    font-size:0.9em;
+    font-weight:200;
+    margin:0;
+}
+
+#calories{
+    border-bottom: 3px solid;
+}
+
+#calories h6{
+    border-bottom: 1px solid;
+}
+
+#calories-fat{
+    float:right;
+}
+
+#percentages-header{
+    float:right;
+}
+
+/*#research{
+    border-top: 1px solid;
+}*/
+
+.skills-list{
+    padding-left:7px;
+    border-top:1px solid;
+}
+
+.skills-list li{
+    border-bottom:1px solid;
+}
+
+.percentages{
+    float:right;
+}
+
+#reporting{
+    border-bottom:1px solid;
+}
+
+#ingredients-text{
+    font-size:0.8em;
+    font-weight:100;
+    margin:0;
 }
