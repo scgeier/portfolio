@@ -1,17 +1,19 @@
+
 body{
     background:#ffffb3;
-    border:3px double;
     margin:2%;
     padding-top: 5%;
 }
 
+
 #yellow-nav{
-    background:none;
+    background:#ffffb3;
     border:none;
     font-family:'Playfair Display SC';
     font-size:1em;
     font-weight:bold;
-    padding:3% 3% 0% 3%;
+    opacity:0.95;
+    padding:3% 2% 0% 2%;
 }
 
 #yellow-nav a{
@@ -87,7 +89,7 @@ body{
 }
 
 
-#clock-page, #page2, #page3{
+#clock-page, #page2{
  border-bottom:3px double;
  height:auto;
  padding-top:5%;
@@ -105,11 +107,13 @@ body{
 }
 
 #page2{
+    padding-top:7%;
     padding-bottom:5%;
 }
 
 #page3{
     height:800px;
+    padding-top:10%;
 }
 
 .clock {
@@ -319,7 +323,8 @@ span{
 
 .project-description{
     width:90%;
-    padding:5%;
+    padding:5% 5% 5% 10%;
+    text-align:left;
 }
 
 #mmp-link, #CIA-link, #senate-link, #map-link, #fingers-link{
@@ -344,23 +349,36 @@ span{
 }
 
 #selfie{
-    float:left;
-    margin-right:2%;
     width:180px;
 }
 
-@media screen and (max-width:767px){
-    #selfie{
-        width:40%;
-    }
+
+#contact-info{
+    float:left;
+    margin-right:2%;
 }
 
-#bio-article, .edu-text{
+#contact-info a{
+    color:black;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+#contact-info a:hover{
+    color:#ffcc00;
+}
+
+#contact-links{
+    padding-top:2%;
+    text-align: center;
+}
+
+
+.bio-text, .edu-text{
     font-family:'Raleway', sans-serif;
 }
 
-#bio-article{
-  border-right:3px double;
+#bio-text{
   padding-right:2%;
 }
 
@@ -369,25 +387,40 @@ span{
     text-align: center;
 }
 
+.college{
+    text-align:center;
+}
+
 .seal{
     height:10%;
     
 }
 
-#infographic{
-   max-height:60%;
-   margin-left:-50%;
+#PI-text{
+    font-weight:200;
+    font-size:0.9em;
+    text-align: center;
+    border-bottom:3px double;
+    border-top:1px solid;
 }
 
-#education-section, #infographic-section, #bio-charts-section{
+
+#infographic-section, #bio-charts-section{
     border:1px solid;
 }
 
+
+#infographic img{
+   width:140%;
+   position:absolute;
+   left:-30%;
+   margin-top:5%;
+}
 
 #nutrition{
     border:1px solid;
     font-family:Helvetica;
-    padding:5px;
+    padding:5%;
 }
 
 #nutrition-header{
@@ -419,7 +452,9 @@ span{
 }
 
 #percentages-header{
-    float:right;
+    border-bottom: 1px solid;
+    font-size:0.8em;
+    text-align: right;
 }
 
 /*#research{
@@ -439,12 +474,38 @@ span{
     float:right;
 }
 
+#backend{
+    border-bottom:none;
+}
+
 #reporting{
     border-bottom:1px solid;
 }
 
 #ingredients-text{
+    border-top:5px solid;
     font-size:0.8em;
     font-weight:100;
     margin:0;
+    padding-top:2%;
+}
+
+
+@media screen and (max-width:767px){
+    #selfie{
+        width:80%;
+    }
+    #contact-info{
+        margin:0;
+        max-width:50%;
+    }
+    #contact-links{
+        text-align: left;
+    }
+   #infographic img{
+        position:relative;
+        max-width:100%;
+        margin-left:20%;
+        margin-bottom:5%;
+    }
 }
