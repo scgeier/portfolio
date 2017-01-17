@@ -512,6 +512,9 @@ span{
 
 /*iPad, portrait*/
 @media only screen and (min-width:768px) and (max-width:1023px){
+    #yellow-nav{
+        padding-right:5%;
+    }
     #clock-page{
         height:auto;
     }
@@ -522,4 +525,10 @@ span{
     .container-fluid{
         margin:2%;
     }
+     #infographic img{
+        position:relative;
+        max-width:90%;
+        margin-left:30%;
+        margin-bottom:5%;
+     }
 }

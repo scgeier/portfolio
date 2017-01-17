@@ -1,6 +1,7 @@
 $( document ).ready(function() {
   console.log("DOM ready!");
-  
+
+//Create smooth scrolling//
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -14,17 +15,42 @@ $( document ).ready(function() {
     }
   });
 
-
+//Fade out the navbar brand when user scrolls down on mobile//
 var waypoint = new Waypoint({
   element: document.getElementById('clock-area'),
   handler: function() {
            if (window.innerWidth < 767) {
-              $("#fading-brand").fadeToggle(300);
+              document.getElementById("fading-brand").style.opacity = 0;
+              document.getElementById("mobile-menu").style.paddingTop = "5%";
            }
   }
 })
 
+//Fade it back in when user scrolls back to top//
 var waypoint2 = new Waypoint({
+  element: document.getElementById('top'),
+  handler: function() {
+           if (window.innerWidth < 1023) {
+              document.getElementById("fading-brand").style.opacity = 1;
+              document.getElementById("fading-brand").style.transition = ".3s linear";
+              document.getElementById("mobile-menu").style.paddingTop = "0%";
+              document.getElementById("mobile-menu").style.transition = ".2s linear";
+           }
+  }
+})
+
+//Make the navbar transparent when user gets to page 2 on mobile//
+var waypoint3 = new Waypoint({
+  element: document.getElementById('page2'),
+  handler: function() {
+           if (window.innerWidth < 1023) {
+             document.getElementById("yellow-nav").style.background = "none";
+           }
+  }
+})
+
+//Fade out the navbar brand on desktop version of page 3//
+var waypoint4 = new Waypoint({
   element: document.getElementById('page3'),
   handler: function() {
            if (window.innerWidth > 767) {
@@ -33,10 +59,7 @@ var waypoint2 = new Waypoint({
   }
 })
 
-
-
-
-
+//Build a working analog clock with JS//
 function initLocalClocks() {
   // Get the local time using JS
   var date = new Date;
@@ -45,7 +68,7 @@ function initLocalClocks() {
   var minutes = date.getMinutes();
   var hours = date.getHours();
 
-  // Create an object with each hand and it's angle in degrees
+// Create an object with each hand and it's angle in degrees
   var hands = [
     {
       hand: 'hours',
@@ -76,7 +99,7 @@ function initLocalClocks() {
 
 initLocalClocks();
 
-//Change the text in the fields based on the user's chosen day and time//
+//Change the text in the home page fields based on the user's chosen day and time//
 function chosenSched() {
   
 var chosenDay;
@@ -138,7 +161,7 @@ document.getElementById("days-dropdown").addEventListener('change', function () 
          document.getElementById("food").innerHTML = "Ham, turkey or salami sandwich on gluten-free bread (I've had Celiac disease since 2005. Thank god gluten-free became trendy; Whole Foods used to rob me blind).";
          document.getElementById("activity").innerHTML = "Freelance interactive journalist";
          document.getElementById("duties").innerHTML = "Reporting on arts, culture and science through interactive multimedia.";
-         document.getElementById("skills").innerHTML = "HTML5, CSS3, JavaScript, jQuery, D3, AngularJS, Node.js, NPM, Express, MongoDB, Adobe CC (particulary PS, Illustrator, Premiere Pro and Audition), social media API's, Git, Google Analytics, Qualtrics, Mechanical Turk";
+         document.getElementById("skills").innerHTML = "HTML5, CSS3, Bootstrap, JavaScript, jQuery, D3, AngularJS, Node.js, NPM, Express, MongoDB, Adobe CC (particulary PS, Illustrator, Premiere Pro and Audition), social media API's, Git, Google Analytics, Qualtrics, Mechanical Turk";
       }
       else if ((chosenDay != "Saturday" && chosenDay != "Sunday") && chosenTime > 12 && chosenTime < 17){
         
@@ -148,7 +171,7 @@ document.getElementById("days-dropdown").addEventListener('change', function () 
          document.getElementById("food").innerHTML = "Nothing right now. I'm not much of a snacker.";
          document.getElementById("activity").innerHTML = "Freelance interactive journalist";
          document.getElementById("duties").innerHTML = "Reporting on arts, culture and science through interactive multimedia.";
-         document.getElementById("skills").innerHTML = "HTML5, CSS3, JavaScript, jQuery, D3, AngularJS, Node.js, NPM, Express, MongoDB, Adobe CC (particulary PS, Illustrator, Premiere Pro and Audition), social media API's, Git, Google Analytics, Qualtrics, Mechanical Turk";
+         document.getElementById("skills").innerHTML = "HTML5, CSS3, Bootstrap, JavaScript, jQuery, D3, AngularJS, Node.js, NPM, Express, MongoDB, Adobe CC (particulary PS, Illustrator, Premiere Pro and Audition), social media API's, Git, Google Analytics, Qualtrics, Mechanical Turk";
       }
       else if ((chosenDay != "Saturday" && chosenDay != "Sunday") && chosenTime == 17){
         
@@ -236,6 +259,7 @@ document.getElementById("days-dropdown").addEventListener('change', function () 
 
 chosenSched();
 
+//Toggle the project descriptions on mouseover//
 $("#mmp-pic").mouseover(function(){
   $(this).fadeToggle(200);
   $("#mmp-description").fadeToggle(400);
