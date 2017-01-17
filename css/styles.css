@@ -35,17 +35,6 @@ body{
     width:300px;
 }
 
-@media screen and (max-width:767px){
-    #navbar-header{
-        margin-top:5%;
-    }
-    #name{
-        line-height: 1.5em;
-    }
-    #job-title{
-        line-height: 1.2em;
-    }
-}
 
 #desktop-menu-right li{
     display:inline;
@@ -100,7 +89,7 @@ body{
     border-top:none;
 }
 
-@media screen and (min-width:768px){
+@media screen and (min-width:767px){
     #clock-page{
         height:700px;
     }
@@ -350,6 +339,7 @@ span{
 
 #selfie{
     width:180px;
+    height:181px;
 }
 
 
@@ -362,6 +352,7 @@ span{
     color:black;
     font-weight: 800;
     text-decoration: none;
+    line-height: 110%;
 }
 
 #contact-info a:hover{
@@ -492,11 +483,20 @@ span{
 
 
 @media screen and (max-width:767px){
+    #navbar-header{
+        margin-top:5%;
+    }
+    #name{
+        line-height: 1.5em;
+    }
+    #job-title{
+        line-height: 1.2em;
+    }
     #selfie{
-        width:80%;
+        width:100%;
     }
     #contact-info{
-        margin:0;
+        margin-right:3%;
         max-width:50%;
     }
     #contact-links{
@@ -507,5 +507,19 @@ span{
         max-width:100%;
         margin-left:20%;
         margin-bottom:5%;
+    }
+}
+
+/*iPad, portrait*/
+@media only screen and (min-width:768px) and (max-width:1023px){
+    #clock-page{
+        height:auto;
+    }
+    .clock{
+        max-width:150%;
+        margin-left:-10%;
+    }
+    .container-fluid{
+        margin:2%;
     }
 }

@@ -138,7 +138,7 @@ document.getElementById("days-dropdown").addEventListener('change', function () 
          document.getElementById("food").innerHTML = "Ham, turkey or salami sandwich on gluten-free bread (I've had Celiac disease since 2005. Thank god gluten-free became trendy; Whole Foods used to rob me blind).";
          document.getElementById("activity").innerHTML = "Freelance interactive journalist";
          document.getElementById("duties").innerHTML = "Reporting on arts, culture and science through interactive multimedia.";
-         document.getElementById("skills").innerHTML = "HTML5, CSS3 & JS (clean and commented), JS frameworks and libraries (especially D3, JQuery, AngularJS), Node.js, NPM, Express, MongoDB, Adobe CC (particulary PS, Illustrator, Premiere Pro and Audition), Git, Google Analytics";
+         document.getElementById("skills").innerHTML = "HTML5, CSS3, JavaScript, jQuery, D3, AngularJS, Node.js, NPM, Express, MongoDB, Adobe CC (particulary PS, Illustrator, Premiere Pro and Audition), social media API's, Git, Google Analytics, Qualtrics, Mechanical Turk";
       }
       else if ((chosenDay != "Saturday" && chosenDay != "Sunday") && chosenTime > 12 && chosenTime < 17){
         
@@ -148,7 +148,7 @@ document.getElementById("days-dropdown").addEventListener('change', function () 
          document.getElementById("food").innerHTML = "Nothing right now. I'm not much of a snacker.";
          document.getElementById("activity").innerHTML = "Freelance interactive journalist";
          document.getElementById("duties").innerHTML = "Reporting on arts, culture and science through interactive multimedia.";
-         document.getElementById("skills").innerHTML = "HTML5, CSS3 & JS (clean and commented), JS frameworks and libraries (especially D3, JQuery, AngularJS), Node.js, NPM, Express, MongoDB, Adobe CC (particulary PS, Illustrator, Premiere Pro and Audition), Git, Google Analytics";
+         document.getElementById("skills").innerHTML = "HTML5, CSS3, JavaScript, jQuery, D3, AngularJS, Node.js, NPM, Express, MongoDB, Adobe CC (particulary PS, Illustrator, Premiere Pro and Audition), social media API's, Git, Google Analytics, Qualtrics, Mechanical Turk";
       }
       else if ((chosenDay != "Saturday" && chosenDay != "Sunday") && chosenTime == 17){
         
