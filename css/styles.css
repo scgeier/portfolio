@@ -3,6 +3,7 @@ body{
     background:#ffffb3;
     margin:2%;
     padding-top: 5%;
+    overflow-x: hidden;
 }
 
 
@@ -48,14 +49,14 @@ body{
 }
 
 #mobile-menu{
-    padding:0% 5% 5% 0%;
+    padding:0% 10% 5% 0%;
 }
 
 #mobile-menu ul {
   list-style: none;
   float:right;
   margin-right:5%;
- padding-bottom:5%;
+  padding-bottom:5%;
 }
 
 #mobile-menu ul li a {
@@ -105,6 +106,10 @@ body{
     padding-top:10%;
 }
 
+#clock-area{
+    overflow:hidden;
+}
+
 .clock {
   border-radius: 50%;
   background: #ffffb3 url('/img/roman-clock.svg') no-repeat center;
@@ -113,7 +118,6 @@ body{
   /*padding-bottom: 31%;*/
   position: relative;
   width: 27em;
-    overflow-x:hidden;
 }
 
 .clock:after {
@@ -276,6 +280,15 @@ span{
 }
 
 @media screen and (max-width:767px){
+    #navbar-header{
+        margin-top:5%;
+    }
+    #name{
+        line-height: 1.5em;
+    }
+    #job-title{
+        line-height: 1.2em;
+    }
     #yellow-nav{
       padding-top:0;
     }
@@ -283,17 +296,14 @@ span{
         padding-top:20%;
     }
     .clock{
-        width:90%;
-        margin-left:10%;
+        width:100%;
+        margin-left:5%;
     }
    .project-graphic{
-        height:45%;
+        height:50%;
     }
     .project-poster{
         padding-top:15%;
-    }
-    #mmp-description, #map-description{
-        font-size:0.9em;
     }
 }
 
@@ -483,15 +493,7 @@ span{
 
 
 @media screen and (max-width:767px){
-    #navbar-header{
-        margin-top:5%;
-    }
-    #name{
-        line-height: 1.5em;
-    }
-    #job-title{
-        line-height: 1.2em;
-    }
+
     #selfie{
         width:100%;
     }
@@ -499,13 +501,10 @@ span{
         margin-right:3%;
         max-width:50%;
     }
-    #contact-links{
-        text-align: left;
-    }
    #infographic img{
         position:relative;
         max-width:100%;
-        margin-left:20%;
+        margin-left:25%;
         margin-bottom:5%;
     }
 }
@@ -514,9 +513,20 @@ span{
 @media only screen and (min-width:768px) and (max-width:1023px){
     #yellow-nav{
         padding-right:5%;
+        background:none;
+    }
+    #job-title{
+        line-height: 95%;
+    }
+    #name{
+        line-height: 150%;
+    }
+    #mobile-menu{
+        padding-top:4%;
     }
     #clock-page{
         height:auto;
+        padding-top:10%;
     }
     .clock{
         max-width:150%;
@@ -525,10 +535,52 @@ span{
     .container-fluid{
         margin:2%;
     }
+    .project-graphic{
+        height:42%;
+    }
+    #mmp-description, #CIA-description, #writers-description, #senate-description, #map-description, #fingers-description{
+        font-size:1.5em;
+    }
      #infographic img{
         position:relative;
         max-width:90%;
         margin-left:30%;
         margin-bottom:5%;
      }
+}
+
+/*iPad, landscape*/
+@media only screen and (min-width:1024px) and (max-width:1279px){
+    #clock-page, #page2, #page3{
+        zoom:0.8;
+    }
+    
+    #job-title{
+        line-height: 110%;
+    }
+    
+    #name{
+        line-height: 140%;
+    }
+    #mobile-menu {
+      padding:2% 0% 2% 0%;
+    }
+    
+    .project-graphic{
+        height:40%;
+    }
+}
+
+/*iPhone 5*/
+@media only screen and (min-width:320px) and (max-width:374px){
+    #mmp-description, #map-description{
+        font-size:0.85em;
+    }
+    #selfie{
+        height:150px;
+    }
+    #contact-links{
+        font-size:0.9em;
+        margin-bottom:0px;
+    }
 }
