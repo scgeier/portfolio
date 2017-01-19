@@ -1,4 +1,8 @@
 
+html{
+    max-width:100%;
+}
+
 body{
     background:#ffffb3;
     margin:2%;
@@ -49,14 +53,14 @@ body{
 }
 
 #mobile-menu{
-    padding:0% 10% 5% 0%;
+   padding:0;
 }
 
 #mobile-menu ul {
   list-style: none;
   float:right;
-  margin-right:5%;
-  padding-bottom:5%;
+  margin-right:-5%;
+  margin-top:-10%;
 }
 
 #mobile-menu ul li a {
@@ -214,7 +218,7 @@ body{
     
 }
   
-.subtitle, #mobile-instructions{
+.subtitle, #projects-subtitle, #mobile-instructions{
     font-family:'IM Fell Great Primer', serif;'
     letter-spacing:0.5;
     margin-bottom:2%;
@@ -281,8 +285,16 @@ span{
 
 @media screen and (max-width:767px){
     #navbar-header{
-        margin-top:5%;
+        /*margin-top:5%;*/
     }
+    
+    #navbar-brand{
+      width:200px;
+    }
+    #navbar-self-portrait{
+      width:25%;
+    }
+    
     #name{
         line-height: 1.5em;
     }
@@ -326,7 +338,7 @@ span{
     text-align:left;
 }
 
-#mmp-link, #CIA-link, #senate-link, #map-link, #fingers-link{
+#mmp-link, #CIA-link, #writers-link, #senate-link, #map-link, #fingers-link{
     color:#ff751a;
 }
 
@@ -550,7 +562,7 @@ span{
 }
 
 /*iPad, landscape*/
-@media only screen and (min-width:1024px) and (max-width:1279px){
+@media only screen and (min-width:1024px) and (max-width:1221px){
     #clock-page, #page2, #page3{
         zoom:0.8;
     }
