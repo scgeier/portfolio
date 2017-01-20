@@ -21,6 +21,12 @@ body{
     padding:3% 2% 0% 2%;
 }
 
+@media screen and (max-width:1221px){
+    #yellow-nav{
+        background:none;
+    }
+}
+
 #yellow-nav a{
     color:black;
 }
@@ -215,11 +221,10 @@ body{
   
 .title{
     font-family:'Gravitas One';
-    
 }
   
-.subtitle, #projects-subtitle, #mobile-instructions{
-    font-family:'IM Fell Great Primer', serif;'
+.subtitle, #projects-subtitle{
+    font-family:'IM Fell Great Primer', serif;
     letter-spacing:0.5;
     margin-bottom:2%;
 }
@@ -270,17 +275,27 @@ span{
 }
 
 #projects-page-title{
-    float:right;
     font-size:1.8em;
-    padding:3% 5% 0% 0%;
+    padding:5% 0% 0% 4%;
 }
 
-#projects-subtitle, #mobile-instructions{
-    font-size:.7em;
+#projects-subtitle{
+    padding:0% 0% 2% 4%;
 }
 
-.project-graphic{
-    height:70%;
+
+.project-box{
+    height:72%;
+    margin-bottom:2%;
+}
+
+.project-box a{
+    color:black;
+}
+
+.project-box a:hover{
+    text-decoration: none;
+    color:#ff751a;
 }
 
 @media screen and (max-width:767px){
@@ -311,21 +326,27 @@ span{
         width:100%;
         margin-left:5%;
     }
-   .project-graphic{
-        height:50%;
+    
+    .project-box{
+        border-bottom: 1px dotted;
+    }
+    
+    #mmp-box, #senate-box, #map-box{
+        height:75%;
+    }
+    #CIA-box, #writers-box{
+        height:65%;
+    }
+    
+    #fingers-box{
+        height:55%;
     }
     .project-poster{
-        padding-top:15%;
+        padding-top:20%;
     }
-}
-
-.project-box a{
-    color:black;
-}
-
-.project-box a:hover{
-    text-decoration: none;
-    color:#ff751a;
+    #fingers-pic{
+        padding-top:10%;
+    }
 }
 
 .project-name{
@@ -336,6 +357,17 @@ span{
     width:90%;
     padding:5% 5% 5% 10%;
     text-align:left;
+    vertical-align: middle;
+}
+
+.fade-in{
+    visibility: visible;
+}
+
+#close-mmp-text, #close-CIA-text, #close-writers-text, #close-senate-text, #close-map-text, #close-fingers-text{
+    float:right;
+    padding:0% 0% 2% 2%;
+    cursor:pointer;
 }
 
 #mmp-link, #CIA-link, #writers-link, #senate-link, #map-link, #fingers-link{
@@ -371,14 +403,15 @@ span{
 }
 
 #contact-info a{
-    color:black;
+    color:#660000;
     font-weight: 800;
+    font-size:1.2em;
     text-decoration: none;
     line-height: 110%;
 }
 
 #contact-info a:hover{
-    color:#ffcc00;
+    color:#990000;
 }
 
 #contact-links{
@@ -522,10 +555,9 @@ span{
 }
 
 /*iPad, portrait*/
-@media only screen and (min-width:768px) and (max-width:1023px){
+@media only screen and (min-width:768px) and (max-width:1221px){
     #yellow-nav{
         padding-right:5%;
-        background:none;
     }
     #job-title{
         line-height: 95%;
@@ -534,7 +566,7 @@ span{
         line-height: 150%;
     }
     #mobile-menu{
-        padding-top:4%;
+        padding-top:15%;
     }
     #clock-page{
         height:auto;
@@ -547,11 +579,17 @@ span{
     .container-fluid{
         margin:2%;
     }
-    .project-graphic{
-        height:42%;
+    
+    .project-box{
+        height:55%;
+        border-bottom:1px dotted;
     }
+    .project-graphic{
+        padding:0% 0% 10% 0%;
+    }
+    
     #mmp-description, #CIA-description, #writers-description, #senate-description, #map-description, #fingers-description{
-        font-size:1.5em;
+        font-size:1.1em;
     }
      #infographic img{
         position:relative;
@@ -575,7 +613,7 @@ span{
         line-height: 140%;
     }
     #mobile-menu {
-      padding:2% 0% 2% 0%;
+      padding:12% 10% 2% 0%;
     }
     
     .project-graphic{

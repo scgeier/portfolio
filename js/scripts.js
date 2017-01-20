@@ -19,9 +19,12 @@ $( document ).ready(function() {
 var waypoint = new Waypoint({
   element: document.getElementById('clock-area'),
   handler: function() {
-           if (window.innerWidth < 767) {
+           if (window.innerWidth <=767) {
               document.getElementById("fading-brand").style.opacity = 0;
               document.getElementById("mobile-menu").style.paddingTop = "5%";
+           }else if (window.innerWidth <=1221) {
+              document.getElementById("fading-brand").style.opacity = 0;
+              document.getElementById("mobile-menu").style.paddingTop = "15%";
            }
   }
 })
@@ -30,24 +33,27 @@ var waypoint = new Waypoint({
 var waypoint2 = new Waypoint({
   element: document.getElementById('top'),
   handler: function() {
-           if (window.innerWidth < 1023) {
+           if (window.innerWidth <=1221) {
               document.getElementById("fading-brand").style.opacity = 1;
               document.getElementById("fading-brand").style.transition = ".3s linear";
               document.getElementById("mobile-menu").style.paddingTop = "0%";
+              document.getElementById("mobile-menu").style.transition = ".2s linear";
+           }else if (window.innerWidth >= 768 && window.innerWidth <=1221) { //Adjust the padding on the tablet mobile menu//
+              document.getElementById("mobile-menu").style.paddingTop = "15%";
               document.getElementById("mobile-menu").style.transition = ".2s linear";
            }
   }
 })
 
 //Make the navbar transparent when user gets to page 2 on mobile//
-var waypoint3 = new Waypoint({
-  element: document.getElementById('page2'),
+/*var waypoint3 = new Waypoint({
+  element: document.getElementById('clock-area'),
   handler: function() {
-           if (window.innerWidth < 1023) {
+           if (window.innerWidth <= 1221) {
              document.getElementById("yellow-nav").style.background = "none";
            }
   }
-})
+})*/
 
 //Fade out the navbar brand on desktop version of page 3//
 var waypoint4 = new Waypoint({
@@ -260,62 +266,62 @@ document.getElementById("days-dropdown").addEventListener('change', function () 
 chosenSched();
 
 //Toggle the project descriptions on mouseover//
-$("#mmp-pic").mouseover(function(){
+$("#mmp-pic").click(function(){
   $(this).fadeToggle(200);
-  $("#mmp-description").fadeToggle(400);
+  $("#mmp-description").fadeToggle(200);
 });
 
-$("#mmp-box").mouseleave(function(){
+$("#close-mmp-text").click(function(){
   $("#mmp-description").fadeToggle(200);
   $("#mmp-pic").fadeToggle(400);
 });
 
-$("#CIA-pic").mouseover(function(){
+$("#CIA-pic").click(function(){
   $(this).fadeToggle(200);
   $("#CIA-description").fadeToggle(400);
 });
 
-$("#CIA-box").mouseleave(function(){
+$("#close-CIA-text").click(function(){
   $("#CIA-description").fadeToggle(200);
   $("#CIA-pic").fadeToggle(400);
 });
 
-$("#writers-pic").mouseenter(function(){
+$("#writers-pic").click(function(){
   $(this).fadeToggle(200);
   $("#writers-description").fadeToggle(400);
 });
 
-$("#writers-box").mouseleave(function(){
+$("#close-writers-text").click(function(){
   $("#writers-description").fadeToggle(200);
   $("#writers-pic").fadeToggle(400);
 });
 
-$("#senate-pic").mouseover(function(){
+$("#senate-pic").click(function(){
   $(this).fadeToggle(200);
   $("#senate-description").fadeToggle(400);
 });
 
-$("#senate-box").mouseleave(function(){
+$("#close-senate-text").click(function(){
   $("#senate-description").fadeToggle(200);
   $("#senate-pic").fadeToggle(400);
 });
 
-$("#map-pic").mouseover(function(){
+$("#map-pic").click(function(){
   $(this).fadeToggle(200);
   $("#map-description").fadeToggle(400);
 });
 
-$("#map-box").mouseleave(function(){
+$("#close-map-text").click(function(){
   $("#map-description").fadeToggle(200);
   $("#map-pic").fadeToggle(400);
 });
 
-$("#fingers-pic").mouseover(function(){
+$("#fingers-pic").click(function(){
   $(this).fadeToggle(200);
   $("#fingers-description").fadeToggle(400);
 });
 
-$("#fingers-box").mouseleave(function(){
+$("#close-fingers-text").click(function(){
   $("#fingers-description").fadeToggle(200);
   $("#fingers-pic").fadeToggle(400);
 });
